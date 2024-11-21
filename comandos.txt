@@ -1,0 +1,6 @@
+
+geth --datadir "./data"  --port 30304 --bootnodes enode://96cba4c862c79423f65a5799502821927a9aefac508f1cb7d3330bb4e6be9c2d67945e3261e10ff01cc8c7ac7b3b9952a24f31bc6e25c2b15a3de9382548a8b8@172.31.8.6:0?discport=30301 --authrpc.port 8547 --ipcdisable --allow-insecure-unlock  --http --http.corsdomain="https://remix.ethereum.org"  --http.addr "172.31.8.6" --http.api web3,eth,debug,personal,net,admin  --ws.addr 172.31.8.6 --networkid 19302733 --unlock 0xb618e7508Bc39150c81b053Bf2BA9852701d10b6 --password password.txt  --mine --miner.etherbase=0xb618e7508Bc39150c81b053Bf2BA9852701d10b6 
+
+================
+
+geth --datadir "./data"  --port 30306 --bootnodes enode://96cba4c862c79423f65a5799502821927a9aefac508f1cb7d3330bb4e6be9c2d67945e3261e10ff01cc8c7ac7b3b9952a24f31bc6e25c2b15a3de9382548a8b8@172.31.8.6:0?discport=30301 -authrpc.port 8546 --networkid 19302733 --unlock 0x6d286dB458a948346b6BBcBFFDD2586b44589495 --password password.txt

@@ -1,0 +1,12 @@
+NODE FULL
+
+Teste
+ curl -X POST http://34.200.225.43:8545 -H "Content-Type: application/json" --data '{"jsonrpc":"2.0","method":"net_version","params":[],"id":19302733}'
+
+
+http://34.200.225.43:8545
+
+Ethereum Mainnet
+mainnet.infura.io
+ETH
+etherscan.io

@@ -1,0 +1,39 @@
+OWN NODE
+docs
+https://docs.optimism.io/builders/node-operators/configuration/base-config
+
+http://34.200.225.43:8545
+	34.200.225.43
+http://172.31.8.6:8545
+          	172.31.8.6
+"terminalTotalDifficultyPassed": true
+
+Boot Key
+------
+bootnode -nodekey boot.key -verbosity 7 -addr "172.31.8.6:30301"
+enode://96cba4c862c79423f65a5799502821927a9aefac508f1cb7d3330bb4e6be9c2d67945e3261e10ff01cc8c7ac7b3b9952a24f31bc6e25c2b15a3de9382548a8b8@172.31.8.6:0?discport=30301
+
+ec2-34-200-225-43.compute-1.amazonaws.com
+
+Node1
+warren1930
+
+NODE1
+---------
+Public address of the key:   0xb618e7508Bc39150c81b053Bf2BA9852701d10b6
+Path of the secret key file: data/keystore/UTC--2024-11-20T23-31-35.036641699Z--b618e7508bc39150c81b053bf2ba9852701d10b6
+enode://8f7ce33a6f3db5e74d6b345a85cc906a3a9cf1e72d2475f778cc363aba3a378cde2ab8385cc5af85a8a5097592d88fef6073eef7c6eee8dcb7b655baa148e5d1@127.0.0.1:30304
+
+geth --datadir "./data"  --port 30304 --bootnodes enode://96cba4c862c79423f65a5799502821927a9aefac508f1cb7d3330bb4e6be9c2d67945e3261e10ff01cc8c7ac7b3b9952a24f31bc6e25c2b15a3de9382548a8b8@172.31.8.6:0?discport=30301 --authrpc.port 8547 --ipcdisable --allow-insecure-unlock  --http --http.corsdomain="https://remix.ethereum.org"  --http.addr "172.31.8.6" --http.api web3,eth,debug,personal,net,admin  --ws.addr 172.31.8.6 --networkid 19302733 --unlock 0xb618e7508Bc39150c81b053Bf2BA9852701d10b6 --password password.txt  --mine --miner.etherbase=0xb618e7508Bc39150c81b053Bf2BA9852701d10b6 
+
+
+NODE2
+----------
+Public address of the key:   0x6d286dB458a948346b6BBcBFFDD2586b44589495
+Path of the secret key file: data/keystore/UTC--2024-11-20T23-27-17.190268656Z--6d286db458a948346b6bbcbffdd2586b44589495
+enode://e4ebcf6c12df452f9a21e44eca982e4c1434f7d7ec9f6fc1d191470a397075153c9172ed382c4d423c85bcc8d62a1dcdc948e490fca06375658879fda89a8220@127.0.0.1:30306
+
+geth --datadir "./data"  --port 30306 --bootnodes enode://96cba4c862c79423f65a5799502821927a9aefac508f1cb7d3330bb4e6be9c2d67945e3261e10ff01cc8c7ac7b3b9952a24f31bc6e25c2b15a3de9382548a8b8@172.31.8.6:0?discport=30301 -authrpc.port 8546 --networkid 19302733 --unlock 0x6d286dB458a948346b6BBcBFFDD2586b44589495 --password password.txt
+
+
+admin.addPeer("enode://e4ebcf6c12df452f9a21e44eca982e4c1434f7d7ec9f6fc1d191470a397075153c9172ed382c4d423c85bcc8d62a1dcdc948e490fca06375658879fda89a8220@127.0.0.1:30306")

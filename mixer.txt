@@ -1,0 +1,8 @@
+USANDO NODES COM MIXER.ETHEREUM
+----------------------------------------------------------
+
+geth --http --http.corsdomain="https://remix.ethereum.org" --http.addr "172.31.8.6" --http.api web3,eth,debug,personal,net --ws.addr "172.31.8.6" --vmdebug --datadir ./data --dev console
+
+http://34.200.225.43:8545
+
+geth --http --http.corsdomain https://remix.ethereum.org --http.addr "172.31.8.6" --ws.addr "172.31.8.6"

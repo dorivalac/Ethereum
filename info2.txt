@@ -1,0 +1,29 @@
+How to build an Ethereum private blockchain using Geth
+https://hemantkgupta.medium.com/how-to-build-an-ethereum-private-blockchain-network-using-geth-3133e23f729d
+
+
+http://34.200.225.43
+http://34.200.225.43:8552 
+http://172.31.8.6
+http://172.31.8.6:8552 
+"terminalTotalDifficultyPassed": true
+
+geth --datadir ./node1 --syncmode "full" --port 30304 --http --http.addr "172.31.8.6" --http.port 8545 --http.api "personal,eth,net,web3,txpool,miner,admin" --http.corsdomain="*" --networkid 19302733 --allow-insecure-unlock --authrpc.port 8553 console
+
+node1
+-------
+geth --datadir ./node1  --port 30304 --http --http.addr "172.31.8.6" --http.port 8545 --http.api "personal,eth,net,web3,txpool,miner,admin" --http.corsdomain="*" --networkid 19302733 --allow-insecure-unlock --authrpc.port 8553 console
+self=enode://92bdf85a6ac39cc30cbf3b78be2b1730e8dddbbf2f6ab5a4e9b974bad8d00bc700fcfa4b959603c6bd5b90c8198f0ad4ba60239004c10232ae75082088819ec0@127.0.0.1:30304
+
+
+node2
+-------
+geth --datadir ./node2  --port 30305 --http --http.addr "172.31.8.6" --http.port 8547 --http.api "personal,eth,net,web3,txpool,miner,admin" --http.corsdomain="*" --networkid 19302733 --allow-insecure-unlock --authrpc.port 8555 console
+enode://32afaf6cd25c9e273411c906c2513eeac49d5cb220ee660418386d44d1fe7eac14d62af4db00ff5fdcabf9b83861970fa5bd4f1b461cd6cf791720146de90025@127.0.0.1:30305
+
+admin.addPeer("enode://32afaf6cd25c9e273411c906c2513eeac49d5cb220ee660418386d44d1fe7eac14d62af4db00ff5fdcabf9b83861970fa5bd4f1b461cd6cf791720146de90025@127.0.0.1:30305")
+
+
+--http --http.api "eth,web3,personal,net"
+
+geth  --http  --http.api "eth,web3,personal,net"  --datadir ./node1 --syncmode "full" --port 30304  --http.addr "172.31.8.6" --http.port 8552  --http.corsdomain="*" --networkid 19302733 --allow-insecure-unlock --authrpc.port 8553 console

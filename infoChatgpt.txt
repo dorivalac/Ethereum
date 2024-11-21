@@ -1,0 +1,15 @@
+PELO CHATGPT
+
+Public address of the key:   0x8D747f8e76f1ff155A9357F16eAF7750b3490622
+Path of the secret key file: data/keystore/UTC--2024-11-20T01-38-55.836838249Z--8d747f8e76f1ff155a9357f16eaf7750b3490622
+
+
+http://34.200.225.43
+http://172.31.8.6:8545
+
+
+geth --datadir ./data
+ --networkid 19302733  --http  --http.addr 172.31.8.6 --http.port 8545 --http.api eth,web3,personal,miner,net wa.addr 172.31.8.6 --allow-insecure-unlock --mine --miner.threads=1
+
+geth attach http://127.0.0.1:8545
+geth attach http://172.31.8.6:8545
